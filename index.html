@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="js.js"></script>
+    <title>Búsqueda fotografías Flickr</title>
+</head>
+<body>
+    <!--Título de la página web-->
+    <h1>Búsqueda de fotografías con AJAX en Flickr</h1>
+    <div>
+        <!--Formulario 1: introduce los tags a través de los cuales hacer la búsqueda-->
+        <form action="#" method="get" onsubmit="return mostrar();">
+            <input type="text" name="etiquetas" id="etiquetas" >
+            <!---->
+            <select name="Opciones" id="select">
+                <option value="all">Todas las fotografías</option>
+                <option value="any">Algunas fotografías</option>
+            </select>
+            <br></br>
+            <br></br>
+            <button type="submit" name="boton" id="buscar">Buscar</button>
+        </form>
+        
+    </div>
+    <div>
+        <table id="tabla"></table>
+    </div>
+</body>
+</html>
+
