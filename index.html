@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="cssajax.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
     <script src="js.js"></script>
     <title>Búsqueda fotografías Flickr</title>
 </head>
-<body>
+<body class="fondo">
     <!--Título de la página web-->
-    <h1>Búsqueda de fotografías con AJAX en Flickr</h1>
+    <h1>Búsqueda de fotografías en Flickr</h1>
+    <!--Título 2 de la página web-->
+    <h3>Introduce el tema de las fotografías que quieres buscar</h3>
     <div>
         <!--Formulario 1: introduce los tags a través de los cuales hacer la búsqueda-->
-        <form action="#" method="get" onsubmit="return mostrar();">
-            <input type="text" name="etiquetas" id="etiquetas" >
-            <!---->
-            <select name="Opciones" id="select">
+        <form action="#" method="get" onsubmit="return mostrar();" class="form-horizontal" role="form">
+            <input type="text" class="form-control" name="etiquetas" id="etiquetas">
+            <!--Select que permite mostrar 'Todas las fotografías' de este tema o solo algunas-->
+            <br></br>
+            <select name="Opciones" type="option" id="select" class="btn btn-default">
                 <option value="all">Todas las fotografías</option>
                 <option value="any">Algunas fotografías</option>
             </select>
             <br></br>
-            <br></br>
-            <button type="submit" name="boton" id="buscar">Buscar</button>
+            <!--Botón que realiza la búsqueda-->
+            <button type="submit" name="boton" id="buscar" class="btn btn-primary btn-lg">Buscar</button>
         </form>
-        
+    <br></br>    
     </div>
     <div>
-        <table id="tabla"></table>
+        <!--Tabla en la que aparecen los resultados-->
+        <table id="tabla" class="table table-bordered"></table>
     </div>
 </body>
 </html>
