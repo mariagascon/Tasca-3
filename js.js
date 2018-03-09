@@ -23,7 +23,7 @@
     function buscar(data) {
         document.getElementById("tabla").innerHTML = "<tr><th class='encabezado'>TÍTULO</th><th class='encabezado2'>ENLACE</th><th class='encabezado3'>FOTOGRAFÍA</th><th class='encabezado4'>FECHA PUBLICACIÓN</th><th class='encabezado5'>AUTOR</th><th class='encabezado6'>ETIQUETAS</th></tr>";
         $.each(data.items, function(i, item){
-            $("#tabla").append("<tr><td class='titulo'>"+item.title+"</td>"+
+            $("#tabla").append("<tr><td class='titulo'>"+(item.title).toUpperCase()+"</td>"+
             "<td>"+item.link+"</td>"+
             "<td><img src='"+item.media.m+"'></td>"+
             "<td>"+item.published+"</td>"+

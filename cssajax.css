@@ -46,7 +46,8 @@
 }
 
 .titulo {
-    font-style: strong;
-    color: rgb(10, 2, 5);
-    font-size: 18px;
+    font-family: fantasy;
+    color: rgb(235, 123, 48);
+    font-size: 15px;
+    text-decoration: blink;
 }
